@@ -19,7 +19,6 @@ logging.basicConfig(
 app = Flask(__name__, template_folder='../front/templates', static_folder='../front/static')
 app.secret_key = os.getenv('SECRET_KEY', 'your-secret-key-here')
 
-# Конфигурация почты
 app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER', 'smtp.yandex.ru')
 app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT', 465))
 app.config['MAIL_USE_SSL'] = os.getenv('MAIL_USE_SSL', 'True') == 'True'
